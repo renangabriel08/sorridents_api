@@ -1,0 +1,32 @@
+{
+    "Api": {
+        "limit": 1,
+        "requests": 1,
+        "time": 1698782957
+    },
+    "usersCreate": {
+        "limit": 5,
+        "requests": 3,
+        "time": 1698715276
+    },
+    "usersRead": {
+        "limit": 5,
+        "requests": 1,
+        "time": 1698715406
+    },
+    "usersUpdate": {
+        "limit": 5,
+        "requests": 1,
+        "time": 1698693012
+    },
+    "schedulesCreate": {
+        "limit": 5,
+        "requests": 1,
+        "time": 1698774182
+    },
+    "schedulesRead": {
+        "limit": 5,
+        "requests": 3,
+        "time": 1698782995
+    }
+}

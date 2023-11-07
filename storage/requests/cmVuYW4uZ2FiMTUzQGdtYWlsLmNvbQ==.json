@@ -1,0 +1,12 @@
+{
+    "Api": {
+        "limit": 1,
+        "requests": 1,
+        "time": 1698785350
+    },
+    "schedulesCreate": {
+        "limit": 5,
+        "requests": 1,
+        "time": 1698782869
+    }
+}

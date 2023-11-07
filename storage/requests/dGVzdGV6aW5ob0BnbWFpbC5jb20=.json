@@ -1,0 +1,22 @@
+{
+    "Api": {
+        "limit": 1,
+        "requests": 1,
+        "time": 1698786211
+    },
+    "usersUpdate": {
+        "limit": 5,
+        "requests": 1,
+        "time": 1698784220
+    },
+    "scheduleUpdate": {
+        "limit": 5,
+        "requests": 3,
+        "time": 1698775269
+    },
+    "schedulesUpdate": {
+        "limit": 5,
+        "requests": 1,
+        "time": 1698786270
+    }
+}
