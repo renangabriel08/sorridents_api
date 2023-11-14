@@ -2,7 +2,7 @@
     "Api": {
         "limit": 1,
         "requests": 1,
-        "time": 1698783725
+        "time": 1699989944
     },
     "usersDelete": {
         "limit": 5,
@@ -13,5 +13,10 @@
         "limit": 5,
         "requests": 3,
         "time": 1698783770
+    },
+    "usersUpdate": {
+        "limit": 5,
+        "requests": 1,
+        "time": 1699990003
     }
 }

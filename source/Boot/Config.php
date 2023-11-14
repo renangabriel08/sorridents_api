@@ -3,7 +3,7 @@
 //Configurações do banco de dados
 define("DATA_LAYER_CONFIG", [
     "driver" => "mysql",
-    "host" => "localhost",
+    "host" => "10.91.228.12",
     "port" => "3306",
     "dbname" => "sorridents",
     "username" => "root",

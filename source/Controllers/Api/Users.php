@@ -23,7 +23,7 @@ class Users extends Api{
                 "not_found",
                 "Erro ao retornar dados do usuário"
             )->back();
-            return false;
+            return;
         }
 
         unset($user->senha);
@@ -80,6 +80,17 @@ class Users extends Api{
         }
 
         $user = new User();
+
+        $result = $user->find("email = :user_email", "user_email={$data['email']}")->fetch();
+
+        if($result) {
+            $this->call(
+                400,
+                "invalid_data",
+                "Email já cadastrado em nosso sistema."
+            )->back();
+            return false;
+        }
         
         $user->nome = $data["nome"];
         $user->email = $data["email"];
@@ -128,6 +139,19 @@ class Users extends Api{
         }
 
         $user = (new User())->findById($this->user->id);
+
+        if(!empty($data['email'])) {
+            $result = $user->find("email = :user_email", "user_email={$data['email']}")->fetch();
+
+            if($result) {
+                $this->call(
+                    400,
+                    "invalid_data",
+                    "Email já cadastrado em nosso sistema."
+                )->back();
+                return false;
+            }
+        }
 
         $user->nome = (!empty($data["nome"])) ? $data['nome'] : $this->user->nome;
         $user->email = (!empty($data["email"])) ? $data['email'] : $this->user->email;

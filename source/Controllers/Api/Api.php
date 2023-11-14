@@ -20,14 +20,15 @@ class Api extends Controller {
 
         if(!$request) { 
             exit;
-        } 
+        }
 
-        $login = $this->login();
-        if(!$login) {
-            exit;
+        if($_GET['route'] != '/users/novo') {
+            $login = $this->login();
+            if(!$login) {
+                exit;
+            }
         }
         
-        (new Schedule())->find("paciente = :user", "user={$this->user->id}")->count();
     }
 
     protected function call(int $code, string $type = null, string $message = null, string $rule = "response"): Api {
@@ -95,7 +96,7 @@ class Api extends Controller {
 
         $userToken = (!empty($this->headers["email"]) ? base64_encode($this->headers["email"]) : null);
              
-        if(!$userToken) {
+        if(!$userToken && $_GET['route'] != '/users/novo') {
             $this->call( 
                 code: 400,
                 type: "invalid_data", 

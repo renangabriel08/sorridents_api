@@ -2,11 +2,11 @@
     "Api": {
         "limit": 1,
         "requests": 1,
-        "time": 1699990002
+        "time": 1699984141
     },
-    "schedulesCreate": {
+    "usersCreate": {
         "limit": 5,
         "requests": 1,
-        "time": 1698782869
+        "time": 1699984200
     }
 }

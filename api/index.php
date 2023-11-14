@@ -11,7 +11,7 @@ $objRouter->namespace("Source\Controllers\Api");
 // Rotas de usuário
 $objRouter->group("/users");
 $objRouter->get("/", "Users:index");
-$objRouter->put("/", "Users:update");
+$objRouter->put("/atualizar", "Users:update");
 $objRouter->delete("/", "Users:delete");
 $objRouter->post("/novo", "Users:create");
 $objRouter->get("/{user_id}", "Users:read");
@@ -21,8 +21,8 @@ $objRouter->group("/schedule");
 $objRouter->get("/", "Schedules:index");
 $objRouter->post("/novo", "Schedules:create");
 $objRouter->get("/{schedule_id}", "Schedules:read");
-$objRouter->put("/atualiza/{schedule_id}", "Schedules:update");
-$objRouter->delete("/deleta/{schedule_id}", "Schedules:delete");
+$objRouter->put("/atualizar/{schedule_id}", "Schedules:update");
+$objRouter->delete("/deletar/{schedule_id}", "Schedules:delete");
 
 // Rotas de estrutura da agenda
 $objRouter->group("/settings");
